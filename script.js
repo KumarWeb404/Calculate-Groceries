@@ -3,7 +3,7 @@
 document.querySelector('input#grocery').addEventListener('click', function () {
   document.querySelector('input#quantity').disabled = false;
 });
-
+//g
 //Grocery items
 
 const groceries = {
@@ -29,10 +29,8 @@ let gInput = function (inputValue, inputQuantity, inputItem) {
 let sumFunc = function(singleSum){
      
      totalSum += singleSum;
-     console.log(totalSum);
      return totalSum;
 }
-let displaySum = sumFunc;
 
 document.querySelector('button').addEventListener('click', function () {
   let inputValue = document.querySelector('input#grocery').value;
@@ -41,7 +39,6 @@ document.querySelector('button').addEventListener('click', function () {
   document.getElementById('grocery-table').style.cssText = 'display: block';
   document.querySelector('table').style.cssText = 'display: table';
   let row = document.getElementById('body').rows.length;
-  sumFunc(gInput(inputValue, inputQuantity, inputItem));
   document.querySelector('tbody').innerHTML += `<tr>
     <th>${row + 1}.</th>
     <td>${inputValue}</td>
@@ -50,8 +47,17 @@ document.querySelector('button').addEventListener('click', function () {
     <td>${gInput(inputValue, inputQuantity, inputItem)}</td>
     </tr>
     `;
+   
 });
 
+document.getElementById('calculate').addEventListener('click',function(){
+  let inputValue = document.querySelector('input#grocery').value;
+  let inputQuantity = Number(document.querySelector('input#quantity').value);
+  let inputItem = groceries[inputValue];
+  document.getElementById('body').innerHTML += `<tr>
+  <th>Total Amount</th>
+  <td>${sumFunc(gInput(inputValue, inputQuantity, inputItem))}</td>`
+})
 //  vico wso :98.46
 //  black Chana : 148.58
 //  Shoe Brush : 37.37
