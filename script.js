@@ -3,7 +3,6 @@
 document.querySelector('input#grocery').addEventListener('click', function () {
   document.querySelector('input#quantity').disabled = false;
 });
-//g
 //Grocery items
 
 const groceries = {
