@@ -17,19 +17,16 @@ const groceries = {
 };
 let totalSum = 0;
 
-let gInput = function (inputValue, inputQuantity, inputItem) {
+let gInput = function (inputQuantity, inputItem) {
   let totalExpense = inputItem * inputQuantity;
-  let items = [inputValue, inputQuantity, inputItem, totalExpense];
-  console.log(items);
-  console.log(totalExpense);
-  return totalExpense;
+  // totalExpense.toFixed(2);
+  return totalExpense.toFixed(2);
 };
 
-let sumFunc = function(singleSum){
-     
-     totalSum += singleSum;
-     return totalSum;
-}
+let sumFunc = function (singleSum) {
+  totalSum += Number(singleSum);
+  return totalSum;
+};
 
 document.querySelector('button').addEventListener('click', function () {
   let inputValue = document.querySelector('input#grocery').value;
@@ -43,20 +40,25 @@ document.querySelector('button').addEventListener('click', function () {
     <td>${inputValue}</td>
     <td>${inputQuantity}</td>
     <td>${inputItem}</td>
-    <td>${gInput(inputValue, inputQuantity, inputItem)}</td>
+    <td>${gInput(inputQuantity, inputItem)}</td>
     </tr>
     `;
-   
+  sumFunc(gInput(inputQuantity, inputItem));
+  document.querySelector('input#grocery').value = '';
+  document.querySelector('input#quantity').value = '';
 });
 
-document.getElementById('calculate').addEventListener('click',function(){
+document.getElementById('calculate').addEventListener('click', function () {
   let inputValue = document.querySelector('input#grocery').value;
   let inputQuantity = Number(document.querySelector('input#quantity').value);
   let inputItem = groceries[inputValue];
   document.getElementById('body').innerHTML += `<tr>
   <th>Total Amount</th>
-  <td>${sumFunc(gInput(inputValue, inputQuantity, inputItem))}</td>`
-})
+  <td></td>
+  <td></td>
+  <td></td>
+  <th>${totalSum}</th>`;
+});
 //  vico wso :98.46
 //  black Chana : 148.58
 //  Shoe Brush : 37.37

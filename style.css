@@ -14,6 +14,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 main {
   height: 80vh;
@@ -22,9 +23,13 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .input-unit {
   margin: 50px 0px;
+}
+.grocery {
+  margin-bottom: 10px;
 }
 #quantity {
   width: 60px;
@@ -43,14 +48,14 @@ input {
   justify-content: center;
   align-items: center;
 }
-#grocery-table{
-  display : none;
+#grocery-table {
+  display: none;
 }
-button{
+button {
   margin-bottom: 20px;
 }
-table{
-    display: none;
+table {
+  display: none;
 }
 table {
   text-align: center;
