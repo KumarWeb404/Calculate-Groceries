@@ -47,7 +47,6 @@ const gPrices = {
 };
 
 let totalSum = 0;
-let notFound = [];
 
 let gInput = function (inputQuantity, inputItem) {
   let totalExpense = inputItem * inputQuantity;
@@ -58,7 +57,6 @@ let sumFunc = function (singleSum) {
   totalSum += Number(singleSum);
   return totalSum;
 };
-
 
 document.getElementById('additem').addEventListener('click', function () {
   let inputValue = document.querySelector('input#grocery').value;
