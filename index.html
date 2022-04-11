@@ -11,13 +11,153 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header id="head">
+    <header id="head" class="container-fluid">
       <h1><u>Calculate Your Groceries!</u></h1>
     </header>
-    <main>
+    <main class="container-fluid">
+      <div class="dropdown">
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenu2"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Grocery List
+        </button>
+        <ul
+          class="dropdown-menu "
+          aria-labelledby="dropdownMenu2"
+        >
+          <button class="dropdown-item" type="button" value="mOil">
+            A-Mustard Oil
+          </button>
+          <button class="dropdown-item" type="button" value="bWipes">
+            Baby Dream Wipes
+          </button>
+          <button class="dropdown-item" type="button" value="bCream">
+            Boroplus Cream
+          </button>
+          <button class="dropdown-item" type="button" value="bDish">
+            Borosil Baking Dish
+          </button>
+          <button class="dropdown-item" type="button" value="broom">
+            Broom
+          </button>
+          <button class="dropdown-item" type="button" value="dOil">
+            Dabur Amla Oil
+          </button>
+          <button class="dropdown-item" type="button" value="dShavingCream">
+            Dettol S/Cream
+          </button>
+          <button class="dropdown-item" type="button" value="eDishBar">
+            Exo-Dish Bar
+          </button>
+          <button class="dropdown-item" type="button" value="fCream">
+            Fair&Lovely Cream
+          </button>
+          <button class="dropdown-item" type="button" value="gHit">
+            Godrej HIT
+          </button>
+          <button class="dropdown-item" type="button" value="hShampoo">
+            H-Baby Shampoo
+          </button>
+          <button class="dropdown-item" type="button" value="antiDndrf">
+            H&S Anti-DNDRF
+          </button>
+          <button class="dropdown-item" type="button" value="hMaticF">
+            Henko-Matic Front
+          </button>
+          <button class="dropdown-item" type="button" value="hMaticT">
+            Henko Matic Top
+          </button>
+          <button class="dropdown-item" type="button" value="harpic">
+            Harpic Regular 500ml
+          </button>
+          <button class="dropdown-item" type="button" value="jOil">
+            Jasmine Oil
+          </button>
+          <button class="dropdown-item" type="button" value="johnsons">
+            J-Baby Powder
+          </button>
+          <button class="dropdown-item" type="button" value="jBuds">
+            J-EarBuds
+          </button>
+          <button class="dropdown-item" type="button" value="lBlades">
+            Laser Blades
+          </button>
+          <button class="dropdown-item" type="button" value="lSoap">
+            LUX Soap
+          </button>
+          <button class="dropdown-item" type="button" value="mLxmRekha">
+            Magic LXMN REKHA
+          </button>
+          <button class="dropdown-item" type="button" value="teaGold">
+            Marvel Tea Gold
+          </button>
+          <button class="dropdown-item" type="button" value="wHanki">
+            Men W/Hanki
+          </button>
+          <button class="dropdown-item" type="button" value="mCoil">
+            Mortien Coil
+          </button>
+          <button class="dropdown-item" type="button" value="nMaggi">
+            Nestle Maggi
+          </button>
+          <button class="dropdown-item" type="button" value="phenolClean">
+            Phynol Wonder Clean
+          </button>
+          <button class="dropdown-item item2" type="button " value="rBlades">
+            Razer Blade
+          </button>
+          <button class="dropdown-item" type="button" value="rHarpic">
+            Red Harpic
+          </button>
+          <button class="dropdown-item" type="button" value="sensodyne">
+            Sensodyne Mint T/P
+          </button>
+          <button class="dropdown-item" type="button" value="shoeBrush">
+            Shoe Brush
+          </button>
+          <button class="dropdown-item" type="button" value="sPad">
+            Sponge Pad
+          </button>
+          <button class="dropdown-item" type="button" value="refinedOil">
+            SUNDRP Refined Oil
+          </button>
+          <button class="dropdown-item" type="button" value="vicoWSO">
+            Vicco Turmeric Cream
+          </button>
+          <button class="dropdown-item" type="button" value="vVest">
+            Victor Vest
+          </button>
+           <button class="dropdown-item" type="button" value="bChana">
+            W-Black Chana Dal
+          </button>
+          <button class="dropdown-item" type="button" value="mMasoor">
+            W-Malka Masoor Dal
+          </button>
+          <button class="dropdown-item" type="button" value="masoor">
+            W-Masoor Dal
+          </button>
+          <button class="dropdown-item" type="button" value="rajma">
+            W-Rajma Dal
+          </button>
+          <button class="dropdown-item" type="button" value="zTbrush">
+            Zig/Zag T/Brush
+          </button>
+        </ul>
+      </div>
+
       <div class="input-text">
         <label class="grocery" for="grocery">Grocery:- </label>
         <input type="text" id="grocery" placeholder="Type your item....." />
@@ -27,7 +167,7 @@
         <input type="number" id="quantity" disabled />
       </div>
       <div>
-        <button type="button" class="btn btn-outline-secondary">
+        <button type="button" class="btn btn-outline-secondary" id="additem">
           Add Item
         </button>
       </div>
@@ -37,7 +177,7 @@
         </button>
       </div>
     </main>
-    <div class="grocery-table" id="grocery-table">
+    <div class="grocery-table table-responsive-lg" id="grocery-table">
       <h1><u>Details</u></h1>
       <table id="Table" class="table table-striped">
         <thead>
@@ -53,7 +193,6 @@
       </table>
     </div>
     <script src="./script.js"></script>
-    <script src="./app.js"></script>
   </body>
 </html>
 <!--
@@ -73,3 +212,21 @@
      Dettol Shaving Cream = 47.59
      Broom = 90.33 
 -->
+<!-- Product List
+Razer Blade
+Shoe Brush
+Men W/Hanki
+Zig/Zag T/Brush
+Mortien Coil
+LUX Soap
+Dettol S/Cream
+Dipper 10 S Large 
+Broom
+W-Chana Dal
+A-Mustard Oil
+Nestle Maggi
+W-Rajma Dal
+W-Masoor Dal
+W-Malka Masoor Dal
+BoroPlus Cream
+ -->

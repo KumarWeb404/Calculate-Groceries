@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
+  min-width: 20vw;
 }
 
 header {
@@ -17,6 +18,7 @@ header {
   text-align: center;
 }
 main {
+  position: relative;
   height: 80vh;
   background-color: #f7ecde;
   display: flex;
@@ -25,6 +27,13 @@ main {
   align-items: center;
   text-align: center;
 }
+ .dropdown{
+     position: absolute;
+     top: 0;
+     right: 50px;
+     margin-top: 24px;
+     margin-right: 40px;
+ }
 .input-unit {
   margin: 50px 0px;
 }
@@ -36,6 +45,17 @@ main {
 }
 label {
   font-size: 2rem;
+}
+.dropdown-menu{
+  max-height: 350px;
+  overflow: scroll;
+}
+.btn{
+  box-shadow: none !important;
+}
+.btn:focus{
+  outline: none;
+ box-shadow: none;
 }
 input {
   height: 40px;
@@ -50,13 +70,13 @@ input {
 }
 #grocery-table {
   display: none;
+  min-width: 20vw;
 }
 button {
+
   margin-bottom: 20px;
 }
 table {
   display: none;
-}
-table {
   text-align: center;
 }
