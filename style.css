@@ -26,9 +26,15 @@ main {
   align-items: center;
   text-align: center;
 }
-.container-1 {
+.grocery-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
+}
+.form-control {
+  min-width: 200px !important;
+  display: inline-block;
+  text-align: center;
 }
 .input-unit {
   margin: 50px 0px;
@@ -75,11 +81,8 @@ table {
   display: none;
   text-align: center;
 }
-@media only screen and (max-width: 520px) {
-  .container-1 {
-    flex-direction: column;
-  }
-  .dropdown-menu {
-    max-height: 200px;
+@media only screen and (min-width: 360px) {
+  .groccery-container {
+    flex-direction: column !important;
   }
 }

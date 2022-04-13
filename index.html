@@ -24,142 +24,133 @@
       <h1><u>Calculate Your Groceries!</u></h1>
     </header>
     <main class="container-fluid">
-      <div class="container-1">
-        <div class="input-text">
-          <label class="grocery" for="grocery">Grocery:- </label>
-          <input type="text" id="grocery" placeholder="Type your item....." />
-        </div>
-        <div class="dropdown">
-          <button
-            class="btn btn-outline-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenu2"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Grocery List
-          </button>
-          <ul class="dropdown-menu" id="drop-down" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button" value="mOil">
+      <div class="grocery-container">
+        <label class=" form-label" for="grocery">Grocery:- </label>
+        <div>
+          <input class="form-control" list="datalistOptions" type="text" id="grocery" placeholder="Type your item....."/>
+          <datalist id="datalistOptions">
+            <option  value="mOil">
               A-Mustard Oil
-            </button>
-            <button class="dropdown-item" type="button" value="bWipes">
+            </option>
+            <option  value="bWipes">
               Baby Dream Wipes
-            </button>
-            <button class="dropdown-item" type="button" value="bCream">
+            </option>
+            <option  value="bCream">
               Boroplus Cream
-            </button>
-            <button class="dropdown-item" type="button" value="bDish">
+            </option>
+            <option  value="bDish">
               Borosil Baking Dish
-            </button>
-            <button class="dropdown-item" type="button" value="broom">
+            </option>
+            <option  value="broom">
               Broom
-            </button>
-            <button class="dropdown-item" type="button" value="dOil">
+            </option>
+            <option  value="dOil">
               Dabur Amla Oil
-            </button>
-            <button class="dropdown-item" type="button" value="dShavingCream">
+            </option>
+            <option  value="dShavingCream">
               Dettol S/Cream
-            </button>
-            <button class="dropdown-item" type="button" value="eDishBar">
+            </option>
+            <option  value="eDishBar">
               Exo-Dish Bar
-            </button>
-            <button class="dropdown-item" type="button" value="fCream">
+            </option>
+            <option  value="fCream">
               Fair&Lovely Cream
-            </button>
-            <button class="dropdown-item" type="button" value="gHit">
+            </option>
+            <option  value="gHit">
               Godrej HIT
-            </button>
-            <button class="dropdown-item" type="button" value="hShampoo">
+            </option>
+            <option  value="hShampoo">
               H-Baby Shampoo
-            </button>
-            <button class="dropdown-item" type="button" value="antiDndrf">
+            </option>
+            <option  value="antiDndrf">
               H&S Anti-DNDRF
-            </button>
-            <button class="dropdown-item" type="button" value="hMaticF">
+            </option>
+            <option  value="hMaticF">
               Henko-Matic Front
-            </button>
-            <button class="dropdown-item" type="button" value="hMaticT">
+            </option>
+            <option  value="hMaticT">
               Henko Matic Top
-            </button>
-            <button class="dropdown-item" type="button" value="harpic">
+            </option>
+            <option  value="harpic">
               Harpic Regular 500ml
-            </button>
-            <button class="dropdown-item" type="button" value="jOil">
+            </option>
+            <option  value="jOil">
               Jasmine Oil
-            </button>
-            <button class="dropdown-item" type="button" value="johnsons">
+            </option>
+            <option  value="johnsons">
               J-Baby Powder
-            </button>
-            <button class="dropdown-item" type="button" value="jBuds">
+            </option>
+            <option  value="jBuds">
               J-EarBuds
-            </button>
-            <button class="dropdown-item" type="button" value="lBlades">
+            </option>
+            <option  value="lBlades">
               Laser Blades
-            </button>
-            <button class="dropdown-item" type="button" value="lSoap">
+            </option>
+            <option  value="lSoap">
               LUX Soap
-            </button>
-            <button class="dropdown-item" type="button" value="mLxmRekha">
+            </option>
+            <option  value="mLxmRekha">
               Magic LXMN REKHA
-            </button>
-            <button class="dropdown-item" type="button" value="teaGold">
+            </option>
+            <option  value="teaGold">
               Marvel Tea Gold
-            </button>
-            <button class="dropdown-item" type="button" value="wHanki">
+            </option>
+            <option  value="wHanki">
               Men W/Hanki
-            </button>
-            <button class="dropdown-item" type="button" value="mCoil">
+            </option>
+            <option  value="mCoil">
               Mortien Coil
-            </button>
-            <button class="dropdown-item" type="button" value="nMaggi">
+            </option>
+            <option  value="nMaggi">
               Nestle Maggi
-            </button>
-            <button class="dropdown-item" type="button" value="phenolClean">
+            </option>
+            <option  value="phenolClean">
               Phynol Wonder Clean
-            </button>
-            <button class="dropdown-item" type="button " value="rBlades">
+            </option>
+            <option value="rBlades">
               Razer Blade
-            </button>
-            <button class="dropdown-item" type="button" value="rHarpic">
+            </option>
+            <option  value="rHarpic">
               Red Harpic
-            </button>
-            <button class="dropdown-item" type="button" value="sensodyne">
+            </option>
+            <option  value="sensodyne">
               Sensodyne Mint T/P
-            </button>
-            <button class="dropdown-item" type="button" value="shoeBrush">
+            </option>
+            <option  value="shoeBrush">
               Shoe Brush
-            </button>
-            <button class="dropdown-item" type="button" value="sPad">
+            </option>
+            <option  value="sPad">
               Sponge Pad
-            </button>
-            <button class="dropdown-item" type="button" value="refinedOil">
+            <option>
+            <option  value="refinedOil">
               SUNDRP Refined Oil
-            </button>
-            <button class="dropdown-item" type="button" value="vicoWSO">
+            </option>
+            <option  value="vicoWSO">
               Vicco Turmeric Cream
-            </button>
-            <button class="dropdown-item" type="button" value="vVest">
+            </option>
+            <option  value="vVest">
               Victor Vest
-            </button>
-            <button class="dropdown-item" type="button" value="bChana">
+            </option>
+            <option  value="bChana">
               W-Black Chana Dal
-            </button>
-            <button class="dropdown-item" type="button" value="mMasoor">
+            </option>
+            <option  value="mMasoor">
               W-Malka Masoor Dal
-            </button>
-            <button class="dropdown-item" type="button" value="masoor">
+            </option>
+            <option  value="masoor">
               W-Masoor Dal
-            </button>
-            <button class="dropdown-item" type="button" value="rajma">
+            </option>
+            <option  value="rajma">
               W-Rajma Dal
-            </button>
-            <button class="dropdown-item" type="button" value="zTbrush">
+            </option>
+            <option  value="zTbrush">
               Zig/Zag T/Brush
-            </button>
-          </ul>
+            </option>
+          </datalist>
         </div>
+   
       </div>
+        
       <div class="input-unit">
         <label for="quantity">Quantity:- </label>
         <input type="number" id="quantity" disabled />

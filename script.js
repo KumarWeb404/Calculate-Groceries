@@ -52,7 +52,6 @@ let gInput = function (inputQuantity, inputItem) {
   let totalExpense = inputItem * inputQuantity;
   return totalExpense.toFixed(2);
 };
-
 let sumFunc = function (singleSum) {
   totalSum += Number(singleSum);
   return totalSum;
@@ -62,21 +61,27 @@ document.getElementById('additem').addEventListener('click', function () {
   let inputValue = document.querySelector('input#grocery').value;
   let inputQuantity = Number(document.querySelector('input#quantity').value);
   let inputItem = gPrices[inputValue];
-  document.getElementById('grocery-table').style.cssText = 'display: block';
-  document.querySelector('table').style.cssText = 'display: table';
-  let row = document.getElementById('body').rows.length;
-  document.querySelector('tbody').innerHTML += `<tr>
-    <th>${row + 1}.</th>
-    <td>${inputValue}</td>
-    <td>${inputQuantity}</td>
-    <td>${inputItem}</td>
-    <td>${gInput(inputQuantity, inputItem)}</td>
-    </tr>
-    `;
-  document.querySelector('input#quantity').disabled = true;
-  sumFunc(gInput(inputQuantity, inputItem));
-  document.querySelector('input#grocery').value = '';
-  document.querySelector('input#quantity').value = '';
+  
+  if(inputValue == '' || inputQuantity == ''){
+    alert('Please Provide a Correct Input.');
+  }else{
+    document.getElementById('grocery-table').style.cssText = 'display: block';
+    document.querySelector('table').style.cssText = 'display: table';
+    let row = document.getElementById('body').rows.length;
+    document.querySelector('tbody').innerHTML += `<tr>
+      <th>${row + 1}.</th>
+      <td>${inputValue}</td>
+      <td>${inputQuantity}</td>
+      <td>${inputItem}</td>
+      <td>${gInput(inputQuantity, inputItem)}</td>
+      </tr>
+      `;
+    document.querySelector('input#quantity').disabled = true;
+    sumFunc(gInput(inputQuantity, inputItem));
+    document.querySelector('input#grocery').value = '';
+    document.querySelector('input#quantity').value = '';
+  }
+ 
 });
 
 document.getElementById('calculate').addEventListener('click', function () {
